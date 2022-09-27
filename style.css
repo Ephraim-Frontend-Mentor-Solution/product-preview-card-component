@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+:root {
+  /* Primary colours */
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  /* Neutral colours */
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+  /* Typography */
+  --primary-enhanced-text: "Fraunces", serif;
+  --primary-text: "Montserrat", sans-serif;
+  font-family: var(--primary-text);
+  font-size: 14px;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background-color: var(--Dark-cyan);
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem;
+  color: var(--White);
+}
+body {
+  background-color: var(--Cream);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.container {
+  margin: 1rem;
+  max-width: 100%;
+}
+.card {
+  border-radius: 10px;
+  background-color: var(--White);
+  overflow: hidden;
+  margin: 1rem;
+  min-height: 615px;
+  display: flex;
+  flex-direction: column;
+}
+.card-image {
+  max-height: 375px;
+}
+.card-image > img {
+  width: 100%;
+}
+.card-description {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.9rem;
+  gap: 1rem;
+}
+.card-category {
+  text-transform: uppercase;
+  color: var(--Dark-grayish-blue);
+  letter-spacing: 0.2rem;
+}
+.card-title {
+  font-family: var(--primary-enhanced-text);
+  font-weight: 700;
+  font-size: 2.2rem;
+  color: var(--Very-dark-blue);
+  line-height: 2rem;
+}
+.card-item-description {
+  color: var(--Dark-grayish-blue);
+}
+.card-shop {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.card-current-price {
+  color: var(--Dark-cyan);
+  font-family: var(--primary-enhanced-text);
+  font-size: 2rem;
+}
+.card-former-price {
+  text-decoration: line-through;
+  color: var(--Dark-grayish-blue);
+}
+.btn {
+  background-color: var(--Dark-cyan);
+  color: var(--White);
+  font-weight: 700;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  border: none;
+  align-self: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+@media (min-width: 810px) {
+  .card {
+    max-width: 540px;
+    min-height: 375px;
+    flex-direction: row;
+  }
+  .card > * {
+    flex-basis: 50%;
+  }
+
+  .card-description {
+    justify-content: flex-start;
+    max-height: 375px;
+  }
+  .btn:active {
+    background-image: linear-gradient(rgb(0 0 0/40%) 0 0);
+  }
+}
